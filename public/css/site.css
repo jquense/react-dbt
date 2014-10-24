@@ -1,0 +1,115 @@
+body {
+  padding-bottom: 70px;
+}
+.btn-link.text-success {
+  color: #468847;
+}
+.btn-link.text-warning {
+  color: #c09853;
+}
+.navbar-header {
+  float: none;
+}
+.top-bar {
+  background-color: white;
+  padding: 10px 0;
+  z-index: 1000;
+}
+.top-bar.affix {
+  top: 0;
+  width: 100%;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e5e5e5;
+  -webkit-transition: background 0.25s ease-in-out;
+  transition: background 0.25s ease-in-out;
+  /*@media (min-width: @screen-sm-min) {
+            width: @container-sm;
+        }
+
+        @media (min-width: @screen-md-min) {
+            width: @container-md;
+        }
+
+        @media (min-width: @screen-lg-min) {
+            width: @container-lg;
+        }*/
+}
+.top-bar.affix + div {
+  margin-top: 70px;
+}
+@media (max-width: 767px) {
+  .scrolling-pills {
+    width: 100%;
+    overflow: auto;
+  }
+  .scrolling-pills ul {
+    display: table;
+    table-layout: fixed;
+  }
+  .scrolling-pills ul > li {
+    width: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+.radio-header {
+  display: inline-block;
+  width: 17px;
+  font-weight: bold;
+}
+.radio-header + .radio-header {
+  margin-left: 10px;
+}
+.form-occurances {
+  width: 65px;
+  display: inline-block;
+}
+.input-padding {
+  margin-top: 5px;
+}
+.tab-content {
+  margin-top: 30px;
+}
+.radio-range {
+  text-align: center;
+}
+.radio-range td {
+  padding: 0 10px;
+}
+.radio-range label {
+  color: #6aa3d5;
+  margin: 0 auto;
+}
+.form-action {
+  margin-top: 40px;
+  background-color: #eeeeee;
+  padding: 20px;
+  border-radius: 4px;
+}
+.nav-pills li.nav-success > a {
+  color: #5cb85c;
+}
+.nav-pills li.nav-success.active > a {
+  color: #ffffff;
+  background-color: #5cb85c;
+}
+.nav-pills li.nav-warning > a {
+  color: #f0ad4e;
+}
+.nav-pills li.nav-warning.active > a {
+  color: #ffffff;
+  background-color: #f0ad4e;
+}
+.nav-pills li.nav-danger > a {
+  color: #d9534f;
+}
+.nav-pills li.nav-danger.active > a {
+  color: #ffffff;
+  background-color: #d9534f;
+}
+.message-area {
+  margin-right: 60px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
