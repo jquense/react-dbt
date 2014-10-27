@@ -14,11 +14,13 @@ module.exports = Library = React.createClass({
 		App.historyStore.listen(this._onStoreChange)
 	},
 
-	componentWillUpdate: function(nextProps, nextState) {
+	componentDidUnmount: function(nextProps, nextState) {
 		App.historyStore.stopListening(this._onStoreChange)
 	},
 
-	getInitialState: function() { return {} },
+	getInitialState: function() {
+		return this.getStoreState();
+	},
 
 	render: function() {
 
@@ -52,7 +54,7 @@ module.exports = Library = React.createClass({
 
 	getStoreState: function(){
 		return {
-			weeks: App.historyStore.state.histories
+			weeks: (App.historyStore.get() || {}).histories || []
 		}
 	},
 

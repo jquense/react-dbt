@@ -11,7 +11,7 @@ module.exports = function sync(method, data, options) {
     options || (options = {})
 
     if (!options.url)
-      params.url = _.result(this, 'url') || urlError()
+      params.url = this.url(data) || urlError()
 
     if (options.data == null && this && method !== 'GET' ) {
       params.contentType = 'application/json'

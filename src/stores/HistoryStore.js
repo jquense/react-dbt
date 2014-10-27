@@ -1,6 +1,5 @@
 'use strict';
 var Store = require('./BaseStore')
-  //, _ = require('lodash')
   , api = require('../api/api')
 
 
@@ -12,5 +11,7 @@ var Store = require('./BaseStore')
       api.History.all().then(function(data){
         self._set({ histories: data })
       })
-    }
+    },
+
+    actions: []
   })

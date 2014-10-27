@@ -18,7 +18,7 @@ module.exports = function(options){
 
       reject(textStatus === 'abort'
         ? new CancellationError(msg)
-        : new AjaxError(xhr.statusCode(), textStatus, xhr))
+        : new AjaxError(xhr.status, textStatus, xhr))
     }
 
     options.success = function onAjaxSuccess(data, textStatus, xhr){

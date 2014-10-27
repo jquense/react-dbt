@@ -2,5 +2,6 @@
 
 module.exports = {
 
-  History: require('./History')
+  History: require('./History'),
+  Diary:   require('./Diary'),
 }

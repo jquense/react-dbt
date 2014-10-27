@@ -14,6 +14,10 @@ Globalize.load(
 Globalize.locale( "en" );
 Globalize.formatDate(new Date, {datetime: 'short'})
 
+dm.parse = function(date, pat){
+  return Globalize.parseDate(date, { pattern: pat } )
+}
+
 dm.format = function(date, pat){
   return Globalize.formatDate(date, { pattern: pat } )
 }

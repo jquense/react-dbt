@@ -17,7 +17,7 @@ module.exports = {
 
     entry: {
       app: './src/app.jsx',
-      vendor: ['react', 'lodash', 'react-router', 'react-bootstrap', 'bluebird']
+      vendor: ['react', 'immutable', 'lodash', 'react-router', 'react-bootstrap', 'bluebird']
     },
 
     output: {
@@ -39,6 +39,7 @@ module.exports = {
 
     module: {
       loaders: [
+        { test: /\.js$/,   loader: 'jsx-loader?harmony=true' },
         { test: /\.jsx$/,  loader: 'jsx-loader?harmony=true&insertPragma=React.DOM' },
         { test: /\.less$/, loader: "style-loader!css-loader!less-loader" },
         { test: /\.woff$/, loader: "url-loader?prefix=font/&limit=5000&mimetype=application/font-woff" },
