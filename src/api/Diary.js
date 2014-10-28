@@ -16,8 +16,10 @@ var BeforeAfter = yup.object({
 });
 
 var Day = yup.object({
-  started:   yup.boolean().default(false),
-  date:      yup.date(),
+  started:     yup.boolean().default(false),
+  date:        yup.date(),
+  firstOfWeek: yup.date(),
+
   dayOfWeek: yup.number().min(0).max(7),
   week:      yup.number().min(1).max(52),
   year:      yup.number(),

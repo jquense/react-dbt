@@ -7,23 +7,23 @@ var dal = require("./define")
   , diary;
 
 diary = new dal.Schema({
-
-    date: { 
+    __v: {type: Number, select: false },
+    date: {
         type: Date,
         default: new Date(),
-        unique: true, 
+        unique: true,
     },
 
     submitted: { type: Boolean, deault: false },
     started: { type: Boolean, deault: false },
 
-    days: { 
+    days: {
         type: [ Day.schema ],
 
         get: function(value){
             if (!value) return value;
             return expandDays(this.date, value)
-        } 
+        }
     }
 }, {  id: false, toJSON: { getters: true }, toObject: { getters: true } });
 
@@ -41,6 +41,6 @@ function expandDays(date, models){
 
         date = date.clone().add('d', 1);
 
-        return model; 
+        return model;
     })
 }
